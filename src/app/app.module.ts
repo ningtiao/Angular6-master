@@ -8,7 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StartComponent } from './start/start.component';
-
+import { ElModule } from 'element-angular'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { StartComponent } from './start/start.component';
     StartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ElModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
