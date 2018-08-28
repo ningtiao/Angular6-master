@@ -8,7 +8,15 @@ import { SearchComponent } from './search/search.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductComponent } from './product/product.component';
 import { StartComponent } from './start/start.component';
-import { ElModule } from 'element-angular'
+import { ElModule } from 'element-angular';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { HomeComponent } from './home/home.component'
+import { RouterModule, Routes } from '@angular/router';
+
+const routeConfig: Routes = [
+  { path: '', component: HomeComponent },
+  { path: '/product/:productTitle', component: ProductDetailComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +25,14 @@ import { ElModule } from 'element-angular'
     SearchComponent,
     CarouselComponent,
     ProductComponent,
-    StartComponent
+    StartComponent,
+    ProductDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ElModule.forRoot(),
+    RouterModule.forRoot(routeConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
