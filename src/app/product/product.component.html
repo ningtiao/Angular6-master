@@ -6,7 +6,7 @@
                 <img class="card-img-top"src="http://placehold.it/320x150"alt="Card image cap">
                 <div class="card-body">
                     <h4 class="float-right">{{product.price}}</h4>
-                    <h4><a [routerLink]="['/product', product.title]" class="title">{{product.title}}</a></h4>
+                    <h4><a [routerLink]="['/product']" [queryParams]="{title:product.title, desc:product.desc}" class="title">{{product.title}}</a></h4>
                     <p>{{product.desc}}</p>
                     <app-start [rating] = "product.rating"></app-start>
                 </div>
